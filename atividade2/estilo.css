@@ -1,0 +1,301 @@
+/* Reset: vale para TODOS os elementos */
+* {
+  margin: 0; /* Zera o espaço externo padrão do navegador */
+  padding: 0; /* Zera o espaço interno padrão do navegador */
+  box-sizing: border-box; /* Padding e borda entram no cálculo da largura/altura */
+  font-family: sans-serif; /* Fonte sem serifa (inclusive em input e button) */
+}
+
+/* Corpo da página */
+body {
+  background-color: #f4f4f4; /* Fundo cinza bem claro */
+  color: #333333; /* Cor padrão do texto */
+  min-height: 100vh; /* Altura mínima = altura da tela */
+  display: flex; /* Ativa flex nos filhos (header, nav, main, footer) */
+  flex-direction: column; /* Empilha os filhos um embaixo do outro */
+}
+
+/* Header: só a marca/título, centralizado */
+header {
+  background-color: #f26522; /* Fundo laranja (cor do Senac) */
+  color: white; /* Texto branco */
+  padding: 20px; /* Espaço interno nos 4 lados */
+  text-align: center; /* Centraliza o título */
+}
+
+/* Nav: barra de menu separada, logo abaixo do header */
+nav {
+  background-color: #111184; /* Fundo azul escuro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra leve */
+  position: sticky; /* Fica grudado ao rolar a página */
+  top: 0; /* Gruda no topo da janela */
+  z-index: 10; /* Fica por cima do conteúdo ao rolar */
+}
+
+/* Lista do menu */
+nav ul {
+  list-style: none; /* Remove as bolinhas */
+  display: flex; /* Itens lado a lado */
+  justify-content: center; /* Centraliza o menu na barra */
+  gap: 10px; /* Espaço entre os itens */
+}
+
+/* Links do menu */
+nav a {
+  display: block; /* Área clicável ocupa todo o padding */
+  color: white; /* Texto branco */
+  text-decoration: none; /* Remove o sublinhado */
+  padding: 14px 20px; /* Área clicável confortável */
+}
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+  background-color: #f26522; /* Fica laranja */
+}
+
+/* fieldset: a caixa que envolve os campos */
+fieldset {
+  background-color: white; /* Fundo branco para destacar do cinza */
+  border: 1px solid #cccccc; /* Borda fina cinza clara */
+  border-radius: 8px; /* Cantos arredondados */
+  padding: 25px; /* Espaço interno */
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 400px; /* Limite para não ficar gigante */
+}
+
+/* legend: o título que fica sobre a borda */
+legend {
+  font-weight: bold; /* Negrito */
+  color: #111184; /* Azul do Senac */
+  padding: 0 10px; /* Sem espaço em cima/embaixo, 10px nas laterais */
+}
+
+/* label: o rótulo acima de cada campo */
+label {
+  display: block; /* Texto fica em cima do campo */
+  margin-top: 15px; /* Espaço entre um campo e outro */
+  margin-bottom: 5px; /* Aproxima o rótulo do campo */
+  font-weight: bold; /* Negrito */
+  color: #333; /* Cinza escuro */
+}
+
+/* input: os campos de digitação */
+input {
+  width: 100%; /* Ocupa toda a largura */
+  padding: 10px; /* Espaço interno */
+  border: 1px solid #cccccc; /* Borda fina cinza */
+  border-radius: 6px; /* Cantos arredondados */
+  font-size: 16px; /* Tamanho legível */
+}
+
+/* Área dos botões: Enviar e Redefinir lado a lado */
+.form-buttons {
+  display: flex; /* Botões na mesma linha */
+  gap: 10px; /* Espaço entre os botões */
+  margin-top: 20px; /* Separa dos campos */
+}
+
+/* Botões do formulário (regras em comum) */
+input[type="submit"],
+input[type="reset"] {
+  flex: 1; /* Cada botão ocupa metade da linha */
+  border: none; /* Tira a borda cinza herdada do input */
+  cursor: pointer; /* Mãozinha ao passar o mouse */
+  font-weight: bold; /* Negrito */
+}
+
+/* Enviar: ação principal, laranja */
+input[type="submit"] {
+  background-color: #f26522; /* Laranja do Senac */
+  color: white; /* Texto branco */
+}
+
+/* Enviar ao passar o mouse */
+input[type="submit"]:hover {
+  background-color: #d9531a; /* Laranja mais escuro */
+}
+
+/* Redefinir: ação secundária, cinza discreto */
+input[type="reset"] {
+  background-color: #e0e0e0; /* Cinza claro */
+  color: #333333; /* Texto cinza escuro */
+}
+
+/* Redefinir ao passar o mouse */
+input[type="reset"]:hover {
+  background-color: #cfcfcf; /* Cinza um pouco mais escuro */
+}
+
+/* Rodapé */
+footer {
+  background-color: #111184; /* Fundo azul escuro */
+  color: white; /* Texto branco */
+  text-align: center; /* Centraliza o texto */
+  padding: 15px; /* Espaço interno */
+  margin-top: auto; /* Garante o rodapé na base da página */
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1; /* Ocupa o espaço restante, empurrando o footer para baixo */
+  display: flex; /* Ativa flex para os filhos */
+  flex-direction: column; /* Filhos um embaixo do outro */
+  align-items: center; /* Centraliza na horizontal */
+  justify-content: center; /* Centraliza na vertical */
+  gap: 15px; /* Espaço entre os filhos */
+  padding: 40px 20px; /* Espaço para não colar no nav e no footer */
+}
+
+/* ===== NOVO: título h2 das páginas ===== */
+main h2 {
+  color: #111184; /* Azul do Senac, igual ao legend */
+  font-size: 1.6rem; /* rem = múltiplo da fonte base (1.6 x 16px) */
+}
+
+/* ===== NOVO: TABELA (consulta.html) ===== */
+table {
+  border-collapse: collapse; /* Junta as bordas das células (sem espaço duplo) */
+  width: 100%; /* Ocupa a largura disponível... */
+  max-width: 800px; /* ...mas não passa de 800px */
+  background-color: white; /* Fundo branco, como o fieldset */
+  border-radius: 8px; /* Cantos arredondados */
+  overflow: hidden; /* Corta o que passar do canto (senão o radius não funciona em tabela) */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Mesma sombra leve do nav */
+}
+
+/* th = células de cabeçalho (ID, Nome, Email...) */
+th {
+  background-color: #111184; /* Azul do Senac */
+  color: white; /* Texto branco */
+  text-align: left; /* O padrão do th é centralizado; aqui vai à esquerda */
+  padding: 12px; /* Espaço interno */
+}
+
+/* td = células de dados */
+td {
+  padding: 12px; /* Espaço interno */
+  border-bottom: 1px solid #cccccc; /* Linha fina separando os registros */
+}
+
+/* Efeito zebra: linhas pares com fundo diferente (facilita a leitura) */
+tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+/* Destaca a linha onde o mouse está */
+tbody tr:hover {
+  background-color: #fff1e8; /* Laranja bem clarinho */
+}
+
+/* ===== NOVO: CALCULADORA (calculadora.html) ===== */
+
+/* A div .calculadora é a "carcaça" azul em volta da tabela */
+.calculadora {
+  background-color: #111184; /* Azul do Senac */
+  padding: 16px; /* Espaço entre a carcaça e os botões */
+  border-radius: 14px; /* Cantos bem arredondados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* A calculadora também é <table>, então herda as regras da tabela acima.
+   Aqui "desfazemos" o que não serve (classe vence o seletor de elemento). */
+.tabela-calculadora {
+  width: auto; /* Tamanho conforme o conteúdo */
+  background: transparent; /* A cor azul vem da .calculadora */
+  box-shadow: none; /* Sem sombra */
+  border: none; /* Sobrescreve o border="1" do HTML */
+  border-radius: 0;
+  border-collapse: separate; /* Células separadas, para o espaço entre botões funcionar */
+  border-spacing: 8px; /* Espaço de 8px entre as células (botões) */
+}
+
+.tabela-calculadora td {
+  padding: 0; /* Tira o padding herdado do td */
+  border: none; /* Tira a linha de baixo herdada do td */
+  background: transparent;
+}
+
+/* Evita o destaque de linha ao passar o mouse (herdado da tabela de consulta) */
+.tabela-calculadora tr:hover {
+  background: transparent;
+}
+
+/* #display = visor onde aparece o número (id usa # no CSS) */
+#display {
+  font-size: 1.8rem; /* Números grandes */
+  text-align: right; /* Alinhado à direita, como calculadora real */
+  background-color: #e8f0e0; /* Verde-claro, parecido com visor LCD */
+  border: none; /* Tira a borda cinza herdada do input */
+}
+
+/* Botões da calculadora */
+.tabela-calculadora button {
+  width: 100%; /* Preenche a célula */
+  min-width: 64px; /* Largura mínima para não ficar apertado */
+  height: 56px; /* Altura fixa, botão quadradão */
+  border: none; /* Sem borda padrão do navegador */
+  border-radius: 8px; /* Cantos arredondados */
+  font-size: 1.2rem; /* Número legível */
+  font-weight: bold; /* Negrito */
+  background-color: white; /* Botão branco */
+  color: #111184; /* Texto azul */
+  cursor: pointer; /* Mãozinha ao passar o mouse */
+}
+
+.tabela-calculadora button:hover {
+  background-color: #ffe3d2; /* Laranja bem clarinho */
+}
+
+/* :active = enquanto o botão está sendo clicado */
+.tabela-calculadora button:active {
+  transform: scale(0.96); /* Encolhe 4% = efeito de botão apertado */
+}
+
+/* ===== NOVO: VALIDAÇÃO VISUAL (cadastro e login) ===== */
+/* :not(:placeholder-shown) = campo que já foi digitado.
+   Assim a cor só aparece depois que o usuário começa a escrever. */
+input:not(:placeholder-shown):invalid {
+  border-color: #c62828; /* Vermelho = valor inválido */
+}
+
+input:not(:placeholder-shown):valid {
+  border-color: #2e7d32; /* Verde = valor válido */
+}
+
+/* ===== NOVO: MENU DA HOME (nav dentro do main) ===== */
+.menu-home {
+  border-radius: 8px; /* Cantos arredondados, já que aqui é uma caixa e não uma barra */
+  overflow: hidden; /* Corta o hover laranja nos cantos arredondados */
+}
+
+.menu-home ul {
+  flex-direction: column; /* Links um embaixo do outro, estilo "menu de opções" */
+  gap: 0; /* Sem espaço entre os links */
+}
+
+.menu-home a {
+  text-align: center; /* Texto centralizado em cada link */
+  min-width: 220px; /* Largura mínima: todos os links ficam do mesmo tamanho */
+}
+
+/* ===== NOVO: RESPONSIVO (celular) - sempre por último ===== */
+/* @media = regras que só valem sob uma condição: tela de até 600px */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Links um embaixo do outro */
+    gap: 0; /* Sem espaço extra entre eles */
+  }
+
+  nav a {
+    text-align: center; /* Texto centralizado em cada link */
+  }
+
+  .form-buttons {
+    flex-direction: column; /* Botões empilhados, mais fáceis de tocar */
+  }
+
+  th,
+  td {
+    padding: 8px; /* Células mais compactas */
+  }
+}

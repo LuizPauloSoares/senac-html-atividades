@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - Sistema Senac</title>
+<link rel="stylesheet" href="estilo.css" />  </head>
+  <body>
+    <header>
+      <h1>Sistema Senac</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="logar.html">Login</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="consulta.html">Consultar Cadastrados</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Cadastro</h2>
+
+        <form action="">
+            <fieldset>
+            <legend>Dados de cadastro</legend>
+            
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              minlength="5"
+              maxlength="100"
+              autocomplete="name"
+              placeholder="Ex.: Ana Silva"
+              required
+              pattern="[A-Za-zÀ-ÿ\s]+"
+              title="O nome deve conter apenas letras e espaços (sem números ou símbolos)."
+            />
+
+            <label for="email">Email para acesso:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              minlength="5"
+              maxlength="100"
+              autocomplete="email"
+              placeholder="seu@email.com"
+              required
+            />
+
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              maxlength="20"
+              minlength="8"
+              autocomplete="new-password"
+              placeholder="Mín. 8 caracteres"
+              required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}"
+              title="Mínimo 8 caracteres, com número, letra maiúscula, letra minúscula e um símbolo."
+            />
+
+            <label for="senhaConfirmada">Confirme sua Senha:</label>
+          <input
+            type="password"
+            id="senhaConfirmada"
+            name="senhaConfirmada"
+            maxlength="20"
+            minlength="8"
+            autocomplete="new-password"
+            placeholder="Repita a senha"
+            required
+          />
+
+            <div class="form-buttons">
+              <input type="submit" value="Enviar" />
+              <input type="reset" value="Redefinir" />
+
+            </div>
+            </fieldset>
+        </form>
+      
+    </main>
+    <footer>
+      <h3>Bem vindo ao Sistema Senac</h3>
+    </footer>
+  </body>
+</html>

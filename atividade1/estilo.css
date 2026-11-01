@@ -1,0 +1,10 @@
+h1 {
+  color: #004a87;
+}
+/*cria um grupo ,p significa paragrafos  e fala pra pegar uma div
+que esta no padrao display flex (horizontal) e atribui cor e estilo de texto*/
+.menu-horizontal p,
+div[style*='display: flex'] p {
+  color: #f37021;
+  font-weight: bold;
+}
