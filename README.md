@@ -1,18 +1,18 @@
 [🇧🇷 Português](README.md) | [🇺🇸 English](README.en.md)
 
-# 🏫 Senac HTML Atividades
+# 🏫 Senac HTML Activities
 
-Atividades de HTML e CSS do curso do Senac: uma página inicial e um sistema web de 5 telas.
+HTML and CSS activities from the Senac course: a landing page and a 5-screen web system.
 
 ## 📌 Status
-- **Atividade 1:** ✅ concluída
-- **Atividade 2:** 🚧 em desenvolvimento (layout e validações prontos; falta JavaScript)
+- **Activity 1:** ✅ completed
+- **Activity 2:** 🚧 in progress (layout and validations done; JavaScript missing)
 
-## 🛠️ Tecnologias utilizadas
-- HTML5 (formulários, tabelas, meta tags)
+## 🛠️ Technologies
+- HTML5 (forms, tables, meta tags)
 - CSS3 (Flexbox, `position: sticky`, `@media`)
 
-## 📂 Estrutura do projeto
+## 📂 Project structure
 ```
 senac-html-atividades/
 ├── atividade1/
@@ -27,80 +27,58 @@ senac-html-atividades/
 │   ├── consulta.html
 │   ├── calculadora.html
 │   └── estilo.css
-└── screenshots/
 ```
 
-## ⚙️ Como funciona
+## ⚙️ How it works
 
-### Atividade 1 — Primeira Página
-- Mostra o logo do Senac, o título `SENAC` e um menu horizontal (Cursos Livres, Cursos Técnico, Graduação, Pós Graduação).
-- O `estilo.css` pinta o título de azul e o menu de laranja/negrito.
-- As meta tags (description, keywords, author, language) ajudam em SEO e acessibilidade.
-- O `meta refresh` redireciona para `https://sp.senac.br` após 5 segundos.
+### Activity 1 — First Page
+- Shows the Senac logo, the `SENAC` title and a horizontal menu (Free Courses, Technical Courses, Undergraduate, Postgraduate).
+- `estilo.css` colors the title blue and the menu orange/bold.
+- Meta tags (description, keywords, author, language) help with SEO and accessibility.
+- The `meta refresh` redirects to `https://sp.senac.br` after 5 seconds.
 
-### Atividade 2 — Sistema Senac
-- **Home:** menu com links para todas as telas.
-- **Login:** e-mail e senha (8 a 20 caracteres).
-- **Cadastro:** nome (só letras), e-mail e senha forte (maiúscula, minúscula, número e símbolo) com confirmação, validados pelo próprio HTML.
-- **Consulta:** tabela de usuários cadastrados (dados de exemplo, senha mascarada).
-- **Calculadora:** visual pronto; os botões ainda não funcionam.
-- Campos com borda verde (válido) ou vermelha (inválido) ao digitar; layout responsivo até 600px.
+### Activity 2 — Senac System
+- **Home:** menu linking to every screen.
+- **Login:** email and password (8 to 20 characters).
+- **Sign up:** name (letters only), email and strong password (upper, lower, number and symbol) with confirmation, validated by HTML itself.
+- **Users list:** table of registered users (sample data, masked password).
+- **Calculator:** visual is ready; buttons don't work yet.
+- Fields get a green (valid) or red (invalid) border while typing; responsive layout up to 600px.
 
-## 🗃️ Estrutura de dados
-Tabela da tela Consulta (estática): `ID | Nome | Email | Senha | Ações`.
+## 🗃️ Data structure
+Users list table (static): `ID | Name | Email | Password | Actions`.
 
-## 📋 Pré-requisitos
-- Navegador atual (Chrome, Edge, Firefox)
-- Git (para clonar) e VS Code com Live Server (opcionais)
+## 📋 Prerequisites
+- A modern browser (Chrome, Edge, Firefox)
+- Git (to clone) and VS Code with Live Server (optional)
 
-## 🚀 Instalação e configuração
-1. Clone o projeto:
+## 🚀 Installation and setup
+1. Clone the project:
    ```bash
    git clone https://github.com/LuizPauloSoares/senac-html-atividades.git
    cd senac-html-atividades
    ```
-2. Abra no navegador:
-   - Atividade 1: `atividade1/atividade1.html`
-   - Atividade 2: `atividade2/home.html`
-3. ⚠️ Na atividade 1, a página redireciona para o site do Senac em 5 segundos. Para evitar, comente a linha `meta http-equiv="refresh"`.
+2. Open in your browser:
+   - Activity 1: `atividade1/atividade1.html`
+   - Activity 2: `atividade2/home.html`
+3. ⚠️ In activity 1, the page redirects to the Senac website after 5 seconds. To avoid it, comment out the `meta http-equiv="refresh"` line.
 
-## 🖼️ Exemplos de uso / Screenshots
+## 🗺️ Roadmap / Next steps
+- [ ] Calculator JavaScript (operations, `C` and `<`)
+- [ ] Validate "confirm password" (must match password)
+- [ ] Save sign-ups (localStorage) and list them in the Users page
+- [ ] Real login logic
+- [ ] Standardize the menu across pages
+- [ ] Fix `authot` to `author` in activity 1
+- [ ] Move inline styles of activity 1 to the CSS
 
-### Atividade 1
-![Atividade 1](screenshots/atividade1.png)
-
-### Atividade 2
-**Home**
-![Home](screenshots/home.png)
-
-**Login**
-![Login](screenshots/login.png)
-
-**Cadastro**
-![Cadastro](screenshots/cadastro.png)
-
-**Consulta**
-![Consulta](screenshots/consulta.png)
-
-**Calculadora**
-![Calculadora](screenshots/calculadora.png)
-
-## 🗺️ Roadmap / Próximos passos
-- [ ] JavaScript da calculadora (operações, `C` e `<`)
-- [ ] Validar "confirme sua senha" (igual à senha)
-- [ ] Salvar cadastros (localStorage) e listar na Consulta
-- [ ] Lógica real do login
-- [ ] Padronizar o menu entre as páginas
-- [ ] Corrigir `authot` para `author` na atividade 1
-- [ ] Mover estilos inline da atividade 1 para o CSS
-
-## 📄 Licença
+## 📄 License
 MIT
 
-## 👤 Autor / Créditos
-**Luiz Paulo** — curso do Senac
+## 👤 Author / Credits
+**Luiz Paulo** — Senac course
 
-- 📧 Email: _seu-email_
-- 📸 Instagram: _@seu-usuario_
-- 💼 LinkedIn: _link-do-perfil_
+- 📧 Email: _your-email_
+- 📸 Instagram: _@your-user_
+- 💼 LinkedIn: _profile-link_
 - 🐙 GitHub: [LuizPauloSoares](https://github.com/LuizPauloSoares)
